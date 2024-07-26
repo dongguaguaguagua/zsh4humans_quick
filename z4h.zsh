@@ -276,7 +276,7 @@ if '[' '-n' "${_z4h_bootstrap-}" ']'; then
     (
       if '[' '-n' "${Z4H_BOOTSTRAP_COMMAND-}" ']'; then
         Z4H_PACKAGE_NAME='zsh4humans'
-        Z4H_PACKAGE_DIR="$tmpdir"/zsh4humans-"$v"
+        Z4H_PACKAGE_DIR="$tmpdir"/zsh4humans_quick-"$v"
         'eval' "$Z4H_BOOTSTRAP_COMMAND" || 'exit'
       fi
 
@@ -308,12 +308,12 @@ if '[' '-n' "${_z4h_bootstrap-}" ']'; then
           >&2 'printf' 'Change \033[32mzsh\033[0m startup files to keep \033[1mZ4H_UPDATING\033[0m intact.\n'
           'exit' '1'
         fi
-        "sh" "$tmpdir"/zsh4humans-"$v"/sc/setup '-n' "$Z4H" '-o' "$Z4H_UPDATING" || 'exit'
+        "sh" "$tmpdir"/zsh4humans_quick-"$v"/sc/setup '-n' "$Z4H" '-o' "$Z4H_UPDATING" || 'exit'
       else
-        "sh" "$tmpdir"/zsh4humans-"$v"/sc/setup '-n' "$Z4H"                      || 'exit'
+        "sh" "$tmpdir"/zsh4humans_quick-"$v"/sc/setup '-n' "$Z4H"                      || 'exit'
       fi
       'command' 'rm' '-rf' '--' "$dir"                          || 'exit'
-      'command' 'mv' '-f' '--' "$tmpdir"/zsh4humans-"$v" "$dir" || 'exit'
+      'command' 'mv' '-f' '--' "$tmpdir"/zsh4humans_quick-"$v" "$dir" || 'exit'
     )
 
     ret="$?"
