@@ -1,2 +1,4 @@
 *.zwc
 /fn/-z4h-compinit-impl
+.DS_Store
+*/.DS_Store
