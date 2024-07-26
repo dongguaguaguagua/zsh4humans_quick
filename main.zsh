@@ -387,6 +387,7 @@ function -z4h-cmd-init() {
         print -ru2 ${(%):-"%F{3}z4h%f: initializing %F{2}zsh%f"}
         wget -O $HOME/.p10k.zsh https://raw.githubusercontent.com/dongguaguaguagua/zsh4humans_quick/v5/.p10k-ascii-concise.zsh
         export P9K_TTY=old
+        exec zsh
         return 1
       fi
     fi
