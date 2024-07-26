@@ -97,6 +97,7 @@ read_choice() {
 >&2 'printf' '\n'
 
 bs_key='Delete'
+zshrc_suffix='.mac'
 tmux='0'
 direnv='0'
 rcs=''
